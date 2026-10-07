@@ -1,0 +1,4 @@
+interface:
+  display_name: "有个性的 AI 设计"
+  short_description: "从创意探索到独立截图评审，建立有个性的视觉方向并精修交付"
+  default_prompt: "使用 $distinctive-ai-design 改进当前页面：先探索不同视觉方向，再实现最合适的一版，依据实际截图评审并精修。"
