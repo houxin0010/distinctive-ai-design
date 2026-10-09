@@ -11,7 +11,7 @@
 | E2E fixture 准备 | PASS | `python3 tests/e2e/prepare.py /workspace/scratch/36f2d40ab3b2/e2e-harness-check`，退出码 0；生成独立 Git 项目和 repo-scoped Skill |
 | 已存在目录保护 | PASS | 重复运行 prepare，退出码 1，FileExistsError；原 index.html 哈希未变 |
 | 截图/功能工具在原始 fixture 上运行 | PASS，仅验证工具 | 两个 viewport，共 4 PNG；CTA、开始状态、禁用重复点击、无横向溢出和无 JS 异常；退出码 0 |
-| GitHub Actions 运行 | NOT VERIFIED | 已加入工作流，本记录不推断远端 CI 状态 |
+| GitHub Actions 运行 | PASS | 提交 `81e7a21ce8b3b5f263e6eebd91cf64f9939d345c` 的 [push 运行](https://github.com/houxin0010/distinctive-ai-design/actions/runs/37988467192) 和 [PR 运行](https://github.com/houxin0010/distinctive-ai-design/actions/runs/37988471771) 均 completed/success；Python 3.11 |
 | 用户本地 Codex CLI 技能发现 | NOT VERIFIED | `command -v codex` 无结果，当前环境没有 CLI，也无法访问用户本机 |
 | `$distinctive-ai-design` 调用与实际视觉探索/设计实现 | NOT VERIFIED | 未运行模型设计任务，没有发现/调用日志、三个方案或 brief 的真实运行证据 |
 | Skill 生成页面的真实截图 | NOT VERIFIED | 原始 fixture 截图不是 Skill 输出；不能替代生成页面截图 |
