@@ -1,0 +1,35 @@
+$ python tests/validate_skill.py
+PASS required files, strict YAML, metadata, interface, skill names, Markdown file links
+NOT VERIFIED Codex discovery/invocation, generated design, screenshots, visual review
+Exit code: 0
+
+$ python -m unittest discover -s tests -p test_*.py -v
+test_repository_contract (test_smoke.SmokeTest.test_repository_contract) ... ok
+test_agent_yaml_malformed_or_duplicate (test_smoke.ValidatorRegressionTest.test_agent_yaml_malformed_or_duplicate) ... ok
+test_bad_icon_or_brand_color (test_smoke.ValidatorRegressionTest.test_bad_icon_or_brand_color) ... ok
+test_bad_name (test_smoke.ValidatorRegressionTest.test_bad_name) ... ok
+test_cli_returns_nonzero_for_invalid_root (test_smoke.ValidatorRegressionTest.test_cli_returns_nonzero_for_invalid_root) ... ok
+test_code_external_fragment_and_encoded_links (test_smoke.ValidatorRegressionTest.test_code_external_fragment_and_encoded_links) ... ok
+test_description_wrong_type (test_smoke.ValidatorRegressionTest.test_description_wrong_type) ... ok
+test_documented_name_mismatch (test_smoke.ValidatorRegressionTest.test_documented_name_mismatch) ... ok
+test_duplicate_yaml_key (test_smoke.ValidatorRegressionTest.test_duplicate_yaml_key) ... ok
+test_empty_body (test_smoke.ValidatorRegressionTest.test_empty_body) ... ok
+test_empty_display_field (test_smoke.ValidatorRegressionTest.test_empty_display_field) ... ok
+test_frontmatter_delimiter (test_smoke.ValidatorRegressionTest.test_frontmatter_delimiter) ... ok
+test_image_and_escaped_link (test_smoke.ValidatorRegressionTest.test_image_and_escaped_link) ... ok
+test_interface_wrong_type (test_smoke.ValidatorRegressionTest.test_interface_wrong_type) ... ok
+test_invalid_utf8 (test_smoke.ValidatorRegressionTest.test_invalid_utf8) ... ok
+test_malformed_yaml (test_smoke.ValidatorRegressionTest.test_malformed_yaml) ... ok
+test_metadata_length_limits (test_smoke.ValidatorRegressionTest.test_metadata_length_limits) ... ok
+test_missing_description (test_smoke.ValidatorRegressionTest.test_missing_description) ... ok
+test_missing_reference_link (test_smoke.ValidatorRegressionTest.test_missing_reference_link) ... ok
+test_missing_required_file (test_smoke.ValidatorRegressionTest.test_missing_required_file) ... ok
+test_policy_boolean (test_smoke.ValidatorRegressionTest.test_policy_boolean) ... ok
+test_prompt_name_mismatch (test_smoke.ValidatorRegressionTest.test_prompt_name_mismatch) ... ok
+test_valid_fixture (test_smoke.ValidatorRegressionTest.test_valid_fixture) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.051s
+
+OK
+Exit code: 0

@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小步 · 专注计时</title>
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#eee}main{max-width:600px;margin:auto;padding:24px;background:white}button{font:inherit;padding:12px}#status{min-height:2em}</style>
+<main><h1>小步</h1><p>为独立开发者提供一次 25 分钟的专注时间。</p>
+<h2>今天，先完成一件事</h2><p id="timer">25:00</p>
+<button id="start" type="button">开始专注</button><p id="status" role="status">准备开始</p></main>
+<script>document.querySelector('#start').addEventListener('click',()=>{
+ document.querySelector('#status').textContent='专注已开始';
+ document.querySelector('#start').disabled=true;
+});</script></html>

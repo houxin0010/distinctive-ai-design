@@ -44,11 +44,11 @@ Use skill-installer to install the skill at the root of https://github.com/houxi
 The following commands target the default user skill directory on macOS/Linux:
 
 ```sh
-mkdir -p ~/.codex/skills
-git clone https://github.com/houxin0010/distinctive-ai-design.git ~/.codex/skills/distinctive-ai-design
+mkdir -p ~/.agents/skills
+git clone https://github.com/houxin0010/distinctive-ai-design.git ~/.agents/skills/distinctive-ai-design
 ```
 
-If `CODEX_HOME` is set, install under its `skills/distinctive-ai-design` directory. On Windows, clone or extract the repository into `.codex/skills/distinctive-ai-design` under your user directory.
+Current official local discovery uses `~/.agents/skills` for user skills and `.agents/skills` in projects. On Windows, use `.agents/skills/distinctive-ai-design` under your user directory. Older versions may use `~/.codex/skills` or `CODEX_HOME/skills`; confirm the location for your installed version rather than assuming legacy discovery.
 
 The destination directory must not already exist. For an existing installation, inspect local changes before replacing anything. Invoke the skill in a Codex session that supports loading local skills; if the current session does not recognize it, try a new session.
 
@@ -57,7 +57,7 @@ The destination directory must not already exist. For an existing installation, 
 For a Git-cloned installation with no local modifications:
 
 ```sh
-git -C ~/.codex/skills/distinctive-ai-design pull --ff-only
+git -C ~/.agents/skills/distinctive-ai-design pull --ff-only
 ```
 
 If Git reports local changes or cannot fast-forward, preserve and resolve those changes before updating.
@@ -156,3 +156,7 @@ This skill draws on Anshu Chimala's [How to turn your AI into a world-class desi
 The material read covers techniques 1–6: random seeds, specific and ambitious prompts, independent critique loops, image generation, video generation, and removal of unnecessary elements. Only the heading of technique 7 was visible. The subsequent subscriber-only text was neither included nor inferred.
 
 This repository contains an independently written operational adaptation, not a copy of the article. Roughly three candidate directions, a two-round review budget, runtime verification, and authorization boundaries are local adaptations rather than fixed requirements from the source. Neither this documentation nor the skill guarantees a particular level of aesthetic quality.
+
+## Automated validation
+
+See the [validation guide](docs/VALIDATION.md) for local smoke tests, negative fixtures, and a minimal Codex CLI E2E reproduction with acceptance criteria. See [actual results](docs/VALIDATION_RESULTS.md) for executed checks. Static checks do not establish CLI discovery or screenshot-review success. The detailed validation guide is currently in Chinese.
