@@ -44,11 +44,11 @@
 以下命令适用于 macOS/Linux，使用默认的用户 skill 目录：
 
 ```sh
-mkdir -p ~/.codex/skills
-git clone https://github.com/houxin0010/distinctive-ai-design.git ~/.codex/skills/distinctive-ai-design
+mkdir -p ~/.agents/skills
+git clone https://github.com/houxin0010/distinctive-ai-design.git ~/.agents/skills/distinctive-ai-design
 ```
 
-如果设置了 `CODEX_HOME`，安装到该目录下的 `skills/distinctive-ai-design`。Windows 可将仓库克隆或解压到用户目录下的 `.codex/skills/distinctive-ai-design`。
+当前官方本地发现目录为 `~/.agents/skills`，项目内可使用 `.agents/skills`。Windows 可将仓库克隆或解压到用户目录下的 `.agents/skills/distinctive-ai-design`。旧版本可能使用 `~/.codex/skills` 或 `CODEX_HOME/skills`；请按本机版本确认，不保证旧目录在当前版本被加载。
 
 目标目录必须尚不存在。已安装时请先查看本地修改，不要直接覆盖。安装后在支持加载本地 skills 的 Codex 会话中调用；若当前会话未识别，可新建会话后重试。
 
@@ -57,7 +57,7 @@ git clone https://github.com/houxin0010/distinctive-ai-design.git ~/.codex/skill
 对于使用 Git 克隆且没有本地修改的安装：
 
 ```sh
-git -C ~/.codex/skills/distinctive-ai-design pull --ff-only
+git -C ~/.agents/skills/distinctive-ai-design pull --ff-only
 ```
 
 如果提示工作区存在修改或无法快进，先保留并处理本地变更，再更新。
@@ -156,3 +156,7 @@ distinctive-ai-design/
 已读内容覆盖技巧 1–6：随机种子、具体且大胆的提示、独立评审反馈循环、图像生成、视频生成和删除无用元素。技巧 7 只有标题可见，后续付费正文未纳入，也未推断其内容。
 
 仓库提供独立编写的执行性改编，不包含原文全文。约三个候选方向、两轮评审预算、运行验证和权限边界是本地适配，不是原文的固定要求。本文与 skill 均不保证生成结果达到某个审美水平。
+
+## 自动化验证
+
+本地 Smoke Test、负向 fixture、最小 Codex CLI 端到端复现命令及验收标准见 [验证方案](docs/VALIDATION.md)，当前执行证据见 [验证结果](docs/VALIDATION_RESULTS.md)。静态通过不代表 Skill 加载或真实截图评审通过。

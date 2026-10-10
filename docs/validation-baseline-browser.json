@@ -1,0 +1,20 @@
+[
+  {
+    "viewport": [
+      1280,
+      800
+    ],
+    "cta_and_state": "pass",
+    "overflow": "pass",
+    "page_errors": []
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "cta_and_state": "pass",
+    "overflow": "pass",
+    "page_errors": []
+  }
+]
